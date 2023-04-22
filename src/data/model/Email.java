@@ -7,7 +7,6 @@ public class Email {
     private int emailId;
     private String subject;
     private String body;
-    public List<Email> emails;
     private Status status;
 
     public Status getStatus() {
@@ -42,12 +41,14 @@ public class Email {
         this.body = body;
     }
 
-    public List<Email> getEmails() {
-        return emails;
-    }
-
-    public void setEmails(List<Email> emails) {
-        this.emails = emails;
+    @Override
+    public String toString() {
+        return "Email{" +
+                "subject='" + subject + '\'' +
+                ", body='" + body + '\'' +
+                '}';
     }
 }
+
+
 
